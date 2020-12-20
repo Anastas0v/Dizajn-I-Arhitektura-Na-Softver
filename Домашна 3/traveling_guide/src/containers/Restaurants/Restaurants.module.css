@@ -12,12 +12,6 @@
     box-sizing: border-box;
     padding: 50px;
 }
-.Label{
-    color: #3388fe;
-}
-.Danger{
-    color:red;
-}
 @media (max-width: 768px){
     .Restaurants{
         flex-direction: column;
