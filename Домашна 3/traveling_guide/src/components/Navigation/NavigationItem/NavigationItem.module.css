@@ -8,7 +8,7 @@
     display: block;
     text-decoration: none;
     color: white;
-    padding: 16px;
+    padding: 15px;
     text-align: center;
 }
 .NavigationItem a:hover,.NavigationItem .active,.NavigationItem a:active{
