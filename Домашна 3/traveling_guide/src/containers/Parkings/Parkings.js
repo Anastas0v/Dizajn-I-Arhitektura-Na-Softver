@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react';
 import axios from "axios";
 import Map from '../../components/Map/Map';
-import classes from './Restaurants.module.css'
+import classes from './Parkings.module.css'
 import Dropdown from '../../components/UI/Dropdown/Dropdown'
 import useDidMountEffect from "../../customHooks/useEffect/useDidMountEffect";
 
-const Restaurants = props => {
+const Parkings = props => {
     const [endCoords,setEndCoords] = useState([]);
     const [data,setData] = useState(null);
     const [restaurants,setRestaurants] = useState([]);
@@ -29,7 +29,7 @@ const Restaurants = props => {
     }
 
     useEffect(() => {
-        axios.get('https://travelling-guide-ca721-default-rtdb.europe-west1.firebasedatabase.app/restaurants.json')
+        axios.get('https://travelling-guide-ca721-default-rtdb.europe-west1.firebasedatabase.app/parkings.json')
             .then(res => {
                 setRestaurants(res.data);
             })
@@ -104,7 +104,7 @@ const Restaurants = props => {
 
     }
     return (
-        <div className={classes.Restaurants}>
+        <div className={classes.Parkings}>
             <div className={classes.Box}>
                 {props.startCoords.length === 0?
                     <p className={classes.Danger}>Enable your location to use the app , reload the page</p>:null}
@@ -119,4 +119,4 @@ const Restaurants = props => {
     );
 }
 
-export default Restaurants;
+export default Parkings;
